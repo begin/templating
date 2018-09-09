@@ -38,9 +38,7 @@ reading!
 
 To put it simply —
 
-#### A template allows you to use the same set of presets and formatting for
-different views of an application, without having to re-create these formats
-over and over again.
+#### A template allows you to use the same set of presets and formatting for different views of an application, without having to re-create these formats over and over again.
 
 Websites are no longer what they used to be two decades ago. They’ve grown in
 complexity, evolving from simple static web pages to complex web applications.
@@ -67,12 +65,12 @@ Through the use of template engines!
 <br> 
 
 The concept of templating can be applied on both client-side as well as
-ser-side.  frameworks like AngularJS, ReactJS or VueJS also have their own
+server-side. Client-side frameworks like AngularJS, ReactJS or VueJS also have their own
 templating and rendering logic. But typically, when we speak about template
 engines, we’re usually talking about templating on the **server-side**, for
 reasons outlined in the above example.
 
-The other significant advantage of using  is **productivity**. Here’s how you
+The other significant advantage of using templating is **productivity**. Here’s how you
 can be much more productive —
 
 * In bigger projects, separation of concerns become a big problem, and so it’s
@@ -111,7 +109,7 @@ syntaxes and features. At the end of this tutorial, you will —
 
 While working with template engines, you’re going to encounter lots of
 terminologies and features. It’s important to know what these concepts are and
-why are they  so that you’ll understand when used in the context of templating.
+why are they important so that you’ll understand when used in the context of templating.
 
 ### Templating Terminologies
 
@@ -143,7 +141,7 @@ the template, and replace it with *Jon* so that the output would be `<h4> Hello 
 #### Delimiters
 
 A delimiter defines the scope of a template expression. One commonly used
-delimiter is `{{` and `}}`, used by template engines like Handlebars. Other
+delimiter is `{{` and `}}`, which is used by template engines like Handlebars. Other
 template engines like UnderscoreJS, use the delimiters  `<%=` and `%>`. Delimiters are how the
 engine understands that the text between them is an *expression* and it needs to
 be evaluated.
