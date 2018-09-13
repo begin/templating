@@ -185,3 +185,88 @@ It'll give this output —
 * Partials
 * Front Matter
 * …
+
+#### Partials
+
+Partials are smaller, re-usable components of a template. Commonly, elements like the head, header, or footer are used across many templates. We can create separate template partials for each of these elements so that we can re-use them across multiple pages.
+
+You can also write common JavaScript code as a separate template partial, since *script* tags are also elements!
+
+Here’s an example — 
+
+    <!-- About Page -->
+    <!DOCTYPE html>
+    <html lang=”en”>
+
+    {{ partial “head” . }}
+
+    <body>
+        {{ partial “header” . }}
+
+        <h4> Welcome to my blog! </h4>
+
+        {{ partial “footer” . }}
+
+        {{ partial “scripts” . }}
+
+    </body>
+    </html>
+
+Now, you can create separate partials for all them — 
+
+    <!-- head partial -->
+    <head>
+        <meta http-equiv=”Content-Type” content=”text/html; charset=UTF-8" />
+     
+        <link href=”
+    " rel=”stylesheet”>
+        <title>Booleanhunter’s Blog </title>
+
+    </head>
+
+<br> 
+
+    <!-- header partial -->
+    <div class="navbar-fixed">
+        <nav class="blue">
+            <a href="https://ashwinhariharan.xyz">Booleanhunter's Blog </a>
+        </nav>
+    </div>
+
+<br> 
+
+    <!-- footer partial -->
+    <footer>
+        <div class="footer-copyright">
+            <div>
+                <span class="grey-text">© 2018 booleanhunter, All rights reserved.
+                </span>
+            </div>
+        </div>
+
+    </footer>
+
+Just like the about page, you can re-use these partials in any other page you
+want. For example — on a feed page, on a portfolio page, and anything else.
+
+**What’s the advantage of using partials?**
+
+* Using partials helps you create changes that reflect site-wide. For example, if you’d like for the site’s title to be changed, you’d no longer have to edit the title tag across multiple pages. Just editing the title in the *head* partial, will have the change reflected on any template that uses this partial.
+* Since partials are part of templates, they have the same advantages of templates too — generating dynamic content based on different conditions, separation of concerns and so on.
+* Partials in turn, can have other partials. This allows you to control the level of re-usability/abstraction you need.
+
+#### Front Matter
+
+Front Matter mostly appears in the context of static site generators (which in turn use templating engines). They are templating variables which hold static information. 
+
+You can use them to hold information like the site’s name, footers, contact information, cover image, site’s home URL, or even copyright clauses. You can define and set these variables in a variety of formats, like JSON, YAML or TOML.
+
+You can later include front-matter in your content -  and during compilation, the site generator will replace them with the actual values.
+
+<br>
+*****
+
+### FAQ
+
+#### #Q1: When should we use client-side rendering versus server-side rendering?
+
